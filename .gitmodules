@@ -1,0 +1,4 @@
+[submodule "account"]
+	path = account
+	url = git@github.com:AtiCommunity/website_service_account.git
+	branch = main
