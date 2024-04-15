@@ -1,0 +1,10 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "The idea of the project is to develop a website that exposes AtiCommunity's other projects.",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "Antoine ROBIN",
+  "license": "ISC"
+}
