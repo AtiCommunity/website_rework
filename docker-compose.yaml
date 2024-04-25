@@ -6,6 +6,7 @@ services:
       - authentication
       - agenda
       - job
+      - frontend
     ports:
       - 80:80
     volumes:
@@ -14,6 +15,7 @@ services:
       - authentication
       - agenda
       - job
+      - frontend
 
   authentication:
     build:
@@ -55,7 +57,17 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    deploy:
+      replicas: ${REPLICAS}
+    networks:
+      - frontend
+
 networks:
   authentication:
   agenda:
   job:
+  frontend:
