@@ -4,21 +4,33 @@ services:
     image: nginx:latest
     networks:
       - authentication
+      - job
     ports:
       - 80:80
     volumes:
       - ./gateway/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - authentication
-  
+      - job
+
   authentication:
     build:
       context: ./authentication
       dockerfile: Dockerfile
     deploy:
-      replicas: 2
+      replicas: ${REPLICAS}
     networks:
       - authentication
 
+  job:
+    build:
+      context: ./job
+      dockerfile: Dockerfile
+    deploy:
+      replicas: ${REPLICAS}
+    networks:
+      - job
+
 networks:
   authentication:
+  job:
