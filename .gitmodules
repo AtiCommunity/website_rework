@@ -10,3 +10,7 @@
 	path = job
 	url = git@github.com:AtiCommunity/website_service_job.git
 	branch = main
+[submodule "agenda"]
+	path = agenda
+	url = git@github.com:AtiCommunity/website_service_agenda.git
+	branch = main
