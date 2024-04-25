@@ -2,3 +2,7 @@
 	path = gateway
 	url = git@github.com:AtiCommunity/website_service_gateway.git
 	branch = main
+[submodule "authentication"]
+	path = authentication
+	url = git@github.com:AtiCommunity/website_service_authentication.git
+	branch = main
