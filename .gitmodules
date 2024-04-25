@@ -1,3 +1,7 @@
+[submodule "gateway"]
+	path = gateway
+	url = git@github.com:AtiCommunity/website_service_gateway.git
+	branch = main
 [submodule "account"]
 	path = account
 	url = git@github.com:AtiCommunity/website_service_account.git
