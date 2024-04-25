@@ -1,0 +1,16 @@
+[submodule "gateway"]
+	path = gateway
+	url = git@github.com:AtiCommunity/website_service_gateway.git
+	branch = main
+[submodule "authentication"]
+	path = authentication
+	url = git@github.com:AtiCommunity/website_service_authentication.git
+	branch = main
+[submodule "job"]
+	path = job
+	url = git@github.com:AtiCommunity/website_service_job.git
+	branch = main
+[submodule "agenda"]
+	path = agenda
+	url = git@github.com:AtiCommunity/website_service_agenda.git
+	branch = main
