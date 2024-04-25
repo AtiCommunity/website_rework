@@ -1,0 +1,24 @@
+services:
+  gateway:
+    container_name: gateway
+    image: nginx:latest
+    networks:
+      - account
+    ports:
+      - 80:80
+    volumes:
+      - ./gateway/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - account
+  
+  account:
+    build:
+      context: ./account
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 2
+    networks:
+      - account
+
+networks:
+  account:
